@@ -8,8 +8,8 @@ export class Faculty extends EntityBase {
     @PrimaryColumn()
     id: string; // Faculty Employment IDs are unique, eg: 1234567
 
-    @OneToOne(() => User, user => user.user_id)
-    @JoinTable()
+    // @OneToOne(() => User, user => user.user_id)
+    // @JoinTable()
     userId: number;
     
     @Column()

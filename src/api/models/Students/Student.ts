@@ -9,8 +9,8 @@ export class Student extends EntityBase {
     @PrimaryColumn()
     id: string;
 
-    @OneToOne(() => User, user => user.user_id)
-    @JoinTable()
+    // @OneToOne(() => User, user => user.user_id)
+    // @JoinTable()
     userId: number;
 
     @ManyToMany(() => Course)

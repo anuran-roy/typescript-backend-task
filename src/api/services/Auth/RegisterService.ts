@@ -18,7 +18,7 @@ export class RegisterService {
         let user = await this.userRepository.createUser(data);
 
         user = await this.userRepository.findOne({
-            where: { id: user.user_id },
+            where: { user_id: user.user_id },
             relations: ['role'],
         });
 

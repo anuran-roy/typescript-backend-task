@@ -7,7 +7,7 @@ export class Role extends EntityBase {
     @PrimaryGeneratedColumn('increment')
     id: number;
 
-    @OneToMany(() => User, user => user.role)
+    @OneToMany(() => User, user => user.user_id)
     @Column()
     role: string;
 }

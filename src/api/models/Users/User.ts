@@ -1,4 +1,4 @@
-import { BeforeInsert, BeforeUpdate, Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { BeforeInsert, BeforeUpdate, Column, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { EntityBase } from '@base/infrastructure/abstracts/EntityBase';
 import { Exclude, Expose } from 'class-transformer';
 import { Role } from './Role';
@@ -25,7 +25,7 @@ export class User extends EntityBase {
     @Column()
     role_id: number;
 
-    // @OneToOne(() => Role)
+    @ManyToOne(() => Role)
     @JoinColumn({ name: 'role_id' })
     role: Role;
 
